@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./casefiles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="card">
+
+        <div class="card-top">
+          <div class="accent-line"></div>
+        </div>
+
+        <div class=card-body>
+          <aside class="sidebar">
+            <nav class="nav-menu">
+              <a href="index.html" class="nav-button">User Profile</a>
+                <a href="timeline.html" class="nav-button">Timeline</a>
+                <a href="todo.html" class="nav-button">Learning Queue</a>
+                <a href="tools.html" class="nav-button">Toolkit</a>
+                <a href="casefiles.html" class="active">Case Files</a>
+                <a href="insights.html" class="nav-button">Insights</a>
+            </nav>
+          </aside>
+
+        <main class="casefiles">
+          <section class="casefile system-breakdown">
+            <button class="header-button">
+              CASE FILE 01 → System Breakdown: Translation Workflow
+              <span class="arrow">›</span>
+            </button>
+
+            <div class="hidden-text">
+              <p>Focus: process improvement, coordination, content cleanup</p>
+
+              <p>This project was an informal internal translation and content correction 
+              initiative within a hotel operations environment in Japan. Existing English 
+              materials contained inconsistencies and machine translation errors that 
+              affected clarity and usability.</p>
+
+              <p>I identified recurring issues across printed and digital materials, 
+              collected and organised existing content, and coordinated a structured
+              review process to improve accuracy and consistency. This included 
+              rewriting and standardising text for clarity and cultural appropriateness.</p>
+
+              <p>Working collaboratively with team members, I supported the 
+              reproduction of corrected materials, including reprinting and physical 
+              deployment (e.g. signage and guest-facing documents). The project 
+              highlighted challenges in unmanaged translation workflows and the importance 
+              of structured content governance.</p>
+            </div>
+          </section>
+
+          <section class="casefile product-thinking">
+            <button class="header-button">
+              CASE FILE 02 → Product Thinking: Portfolio as a System
+              <span class="arrow">›</span>
+            </button>
+
+            <div class="hidden-text">
+              <p>Focus: Agile, iteration, system design</p>
+
+              <p>This project focused on the development of a personal portfolio 
+              website as an iterative product system rather than a static deliverable.</p>
+
+              <p>I structured the build process using an Agile-inspired approach, 
+              breaking development into iterative stages including planning, design 
+              exploration, tool selection, domain setup, and implementation. 
+              Each stage was treated as a sprint with defined outcomes and review checkpoints.</p>
+
+              <p>Key decisions included selecting tools (Figma for design prototyping, 
+              hosting and domain configuration, content structuring) and continuously 
+              refining the site architecture based on usability and clarity of presentation.</p>
+
+              <p>The project reflects an ongoing system build, where design, content, 
+              and technical setup evolve together through iterative improvement cycles.</p>
+            </div>
+          </section>
+
+          <section class="casefile delivery-systems">
+            <button class="header-button">
+              CASE FILE 03 → Multi-Stakeholder Creative Delivery Systems
+              <span class="arrow">›</span>
+            </button>
+
+            <div class="hidden-text">
+              <p>Focus: Multi-stakeholder coordination & mixed methodologies</p>
+
+              <p>This case examined sustained independent creative project delivery 
+              across multiple clients and stakeholders, focusing on workflow management, 
+              prioritisation, and structured execution.</p>
+
+              <p>Work involved managing multiple concurrent projects with varying scopes, 
+              timelines, and feedback cycles. Some projects followed a linear delivery 
+              structure (brief - concept - refinement - final output), while others
+              required iterative development with ongoing stakeholder input.</p>
+
+              <p>I coordinated communication across clients, managed competing deadlines, 
+              and structured workflows to maintain consistent output quality across 
+              parallel deliverables. The experience developed strong capacity for 
+              prioritisation, context switching, and delivery under variable constraints.</p>
+            </div>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelectorAll('.header-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const casefile = button.closest('.casefile');
+      casefile.classList.toggle('open');
+    });
+  });
+</script>

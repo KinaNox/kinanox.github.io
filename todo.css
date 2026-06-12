@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  font-size: clamp(14px, 1vw, 16px);
+}
+
+body {
+  margin: 0;
+  font-family: inter, sans-serif;
+  background-color: #e7e0e0;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 20px ;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  width: 1000px;
+  min-height: 600px;
+  position: relative;
+}
+
+.card-top {
+  padding: 30px 0px 0 0;
+}
+
+.card-body {
+  display: flex;
+  align-items: stretch;
+}
+
+.accent-line {
+  height: 4px;
+  background-color: #7BAE7F;
+  width: 100%;
+  display: block;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+  padding: 0 0 0 0px;
+  border-radius: 0px 0px 0px 12px;
+  position: sticky;
+  background-color: #eceaea;
+  box-sizing: border-box;
+  font-family: 'inter';
+  z-index: 1000;
+  min-height: 600px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-button,
+.active {
+  text-decoration: none;
+  padding: 15px;
+  color: #2e2d2d;
+  background-color:#ccc6c6;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.active {
+  background-color: #7BAE7F;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: #B7D7B9 ;
+  color: white
+}
+
+.todo-content {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background-color: #7BAE7F;
+}
+
+.todo-card {
+  flex: 1;
+  background: #fcfcfc;
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-header {
+  padding: 0 0px 15px 15px;
+  border-bottom: 1px solid #ececec;
+}
+
+.todo-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #404040;
+}
+
+.todo-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #ececec;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.todo-item strong {
+  display: block;
+}
+
+.todo-item span {
+  font-size: 12px;
+  color: #777;
+}
+
+.todo-card::before {
+  content: "";
+
+  display: block;
+
+  height: 4px;
+
+  border-radius: 12px 12px 0 0;
+
+  margin: -5px -5px 10px -5px;
+}
+
+.todo-card.completed .todo-item {
+  border-left: 3px solid #7BAE7F;
+}
+
+.todo-card.progress .todo-item {
+  border-left: 3px solid #A6C4E3;
+}
+
+.todo-card.planned .todo-item {
+  border-left: 3px solid #E8D7A8;
+}
+
+
+@media (max-width: 900px) {
+
+  .page {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    border-radius: 0;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav-button,
+  .active {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+}
